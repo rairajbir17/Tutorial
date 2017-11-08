@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
 
-    <title>Database Initialization :: Rajbir Rai&#39;s Blogs</title>
+    <title>How to setup online payment module on your prestashop online store? :: Rajbir Rai&#39;s Blogs</title>
     <link rel="shortcut icon" href="/rajbir/images/favicon.png" type="image/x-icon" />
     <link href="/rajbir/css/nucleus.css" rel="stylesheet">
     <link href="/rajbir/css/font-awesome.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     
 
   </head>
-  <body class="" data-url="/rajbir/getting-start-with-prestashop/database/">
+  <body class="" data-url="/rajbir/how-to-setup-online-payment-module-on-your-prestashop-online-store/">
     <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
   <div id="header-wrapper">
     <div id="header"> 
@@ -63,7 +63,7 @@
         <span>Which ECommerce to choose?</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
     </li>
-    <li data-nav-id="/rajbir/getting-start-with-prestashop/" class="dd-item parent parent">
+    <li data-nav-id="/rajbir/getting-start-with-prestashop/" class="dd-item parent">
       <a href="/rajbir/getting-start-with-prestashop/">
         <span>Getting started with Prestashop</span>
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
@@ -74,7 +74,7 @@
           <span>Installation</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/rajbir/getting-start-with-prestashop/database/" class="dd-item active">
+      <li data-nav-id="/rajbir/getting-start-with-prestashop/database/" class="dd-item">
         <a href="/rajbir/getting-start-with-prestashop/database/">
           <span>Database Initialization</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -86,7 +86,7 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/rajbir/how-to-setup-online-payment-module-on-your-prestashop-online-store/" class="dd-item parent">
+    <li data-nav-id="/rajbir/how-to-setup-online-payment-module-on-your-prestashop-online-store/" class="dd-item parent active parent">
       <a href="/rajbir/how-to-setup-online-payment-module-on-your-prestashop-online-store/">
         <span>How to setup online payment module on your prestashop online store?</span><i class="fa fa-circle-thin read-icon"></i>
       </a>
@@ -118,7 +118,7 @@
               
               
             <div id="top-github-link">
-              <a class="github-link" href="https://github.com/rairajbir17/Tutorial/blob/master/README.mdgetting-start-with-Prestashop/database.md" target="blank">
+              <a class="github-link" href="https://github.com/rairajbir17/Tutorial/blob/master/README.mdHow%20to%20setup%20online%20payment%20module%20on%20your%20prestashop%20online%20store/_index.md" target="blank">
                 <i class="fa fa-code-fork"></i>
                 Edit page
               </a>
@@ -135,12 +135,7 @@
 
 
 
-
-
-
- <a href='/rajbir/'>WMDD 4995: Industry Topics II</a> > <a href='/rajbir/getting-start-with-prestashop/'>Getting started with Prestashop</a> > Database Initialization
-
- 
+ <a href='/rajbir/'>WMDD 4995: Industry Topics II</a> > How to setup online payment module on your prestashop online store?
 
  
 
@@ -153,7 +148,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#next-step-configuration">Next Step: Configuration</a></li>
+<li><a href="#requirements">Requirements:</a></li>
+<li><a href="#installation">Installation</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -165,7 +161,7 @@
         
         <div id="body-inner">
           
-            <h1>Database Initialization</h1>
+            <h1>How to setup online payment module on your prestashop online store?</h1>
           
 
 
@@ -173,28 +169,75 @@
 
 
 
-<p>For prestashop installation we need one new database. You can create database on your web server. In case there is no MySql user who has all privileges for accessing and modifying this database, create it as well.</p>
+<p>There are many modules available for installation of payment gateway on the PrestaShop website. For example Paypal, Stripe etc. Majority of the developers prefer Stripe over others available modules. Stripe is easy to install and configure.</p>
+
+<p>To install Stripe, first you have to:</p>
 
 <ul>
-<li><p>Step 1: Make connection with the database
-<img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/login%20to%20dataabase%20administrator.JPG" alt="" /></p></li>
-
-<li><p>Step 2: With the following command, create the database</p></li>
+<li>Create a free account at <a href="https://stripe.com/ca">stripe.com</a></li>
+<li>Go to your <a href="https://dashboard.stripe.com/login?redirect=%2Faccount%2Fapikeys">API Key Settings</a></li>
+<li>Write down the Test Secret Key</li>
 </ul>
 
-<pre><code>create database prestashop;
-</code></pre>
+<h2 id="requirements">Requirements:</h2>
 
-<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/create%20database.JPG" alt="" /></p>
+<p>To use this module, you need to have following things on our website:</p>
 
-<h2 id="next-step-configuration">Next Step: Configuration</h2>
+<ul>
+<li><strong>SSL Certificate</strong>: Your website should have SSL Certificate if you don&rsquo;t have then connect to your web hosting company.</li>
+<li><strong>Php 5.3.3 or later</strong>: You need minimum 5.3.3 version of Php.</li>
+<li>You need minimum 5.3.3 version of Php.
+Stripe doesn&rsquo;t support API requests made with TLS 1.0. Make sure your hosting provider must initiate HTTPS connections with TLS 1.2 or later.</li>
+</ul>
 
-<p><a href="/rajbir/getting-start-with-prestashop/configuration/">Follow instructions here</a></p>
+<h2 id="installation">Installation</h2>
+
+<p>Create an account on stripe website. When you will log in to you stripe account, you will see an API menu on the left side. Click on the API menu, you will see token for Publishable key and Secret key. Note down Publishable Key and Secret Key for testing (Testing keys will not make actual payments. You will get couple of dumy credit/debit card information from stripe website to test the payment process). It will be used later on your PrestaShop website.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/5.JPG" alt="" /></p>
+
+<p>To get live Keys(Which will work on the original cards), You have to activate your account on the stripe. To activate your account on the stripe, you will need to fill Account Application Form on the stripe website. Click on &ldquo;Activate your account&rdquo;, you will see form something like as shown below: After activation, you will get live Publishable Key and Secret Key.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/7.png" alt="" /></p>
+
+<p>Now Login to your PrestaShop website as admin. Then on the dashboard, you will see Modules and Services as shown in the picture. Click on it to get all the modules and services.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/1.JPG" alt="" /></p>
+
+<p>Search for &ldquo;stripe&rdquo; in the modules, you will see one module named &ldquo;Stripe payment method&rdquo;, install this module and then configure this module.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/Inked2_LI.JPG" alt="" /></p>
+
+<p>Click on the configure, You will see Stripe Payment Configuration area. On this page, you will insert Secret Key and Publishable Key, and save all the information.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/3.JPG" alt="" /></p>
+
+<p>You are done with installation. Now to Test the payment gateway, navigate to payment part of your website( e.g. After Check out when user goes to payment part) Underneath of all the product details you will be Stripe Payment link.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/8.JPG" alt="" /></p>
+
+<p>Finally, you will see a popup for Card Payment. On this popup, your customer will enter his payment details and will pay the required account for his shopping. This is default card layout of stripe. You can edit its design by changing prestastripe module in your website.</p>
+
+<p><img src="https://raw.githubusercontent.com/rairajbir17/Tutorial/master/images/9.JPG" alt="" /></p>
+
+<div class="panel panel-success">
+	<div class="panel-heading">Resources</div>
+	<div class="panel-body"><p>List of Resources:</p>
+
+<p><a href="http://www.yatabeauty.com/">http://www.yatabeauty.com/</a></p>
+
+<p><a href="https://dashboard.stripe.com/test/dashboard">https://dashboard.stripe.com/test/dashboard</a></p>
+</div>
+	<div class="panel-footer">Next Go to <a href="../getting-start-with-prestashop">Getting Started with Prestashop</a></div>
+</div>
+
 
 
 <footer class=" footline" >
 	
 </footer>
+
+
 
 
 
@@ -209,8 +252,8 @@
     
 
     <div id="navigation">
-        <a class="nav nav-prev" href="/rajbir/getting-start-with-prestashop/installation/" title="Installation"> <i class="fa fa-chevron-left"></i></a>
-        <a class="nav nav-next" href="/rajbir/getting-start-with-prestashop/configuration/" title="Configuration" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="/rajbir/getting-start-with-prestashop/configuration/" title="Configuration"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/rajbir/difference-between-wordpress-prestashop-and-magento/" title="Which ECommerce to choose?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>
@@ -235,4 +278,3 @@
 
   </body>
 </html>
-
